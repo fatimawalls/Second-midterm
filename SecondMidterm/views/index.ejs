@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones Characters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Game of Thrones Characters</h1>
+        <nav>
+            <form action="/" method="GET">
+                <input type="text" name="search" placeholder="Search characters..." value="<%= searchQuery %>">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <div class="character-list">
+            <% characters.forEach(character => { %>
+                <div class="character-card">
+                    <img src="<%= character.imageUrl || 'default-image.jpg' %>" alt="Character Image">
+                    <h2><%= character.firstName %> <%= character.lastName %></h2>
+                    <button class="view-details-btn" onclick="window.location.href='/character/<%= character.id %>'">View Details</button>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game of Thrones Ultimate Guide</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= character.firstName %> <%= character.lastName %> - Game of Thrones Ultimate Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><%= character.firstName %> <%= character.lastName %></h1>
+        <nav>
+            <a href="/">Back to All Characters</a>
+        </nav>
+    </header>
+
+    <main>
+        <% characters.forEach(character => { %>
+            <div class="character-card">
+                <img src="<%= character.imageUrl || 'default-image.jpg' %>" alt="Character Image">
+                <h2><%= character.firstName %> <%= character.lastName %></h2>
+                <button class="view-details-btn" data-id="<%= character.id %>">View Details</button>
+            </div>
+        <% }); %>
+            <div class="character-details">
+                <p>ID: <%= character.id %></p>
+                <p>Born: <%= character.born || 'Unknown' %></p>
+                <p>Died: <%= character.died || 'Unknown' %></p>
+                <p>Titles: <%= character.titles.join(', ') || 'None' %></p>
+                <p>Aliases: <%= character.aliases.join(', ') || 'None' %></p>
+                <p>Family: <%= character.family || 'None' %></p>
+                <img src="<%= character.familyCrest || 'default-crest.jpg' %>" alt="Family Crest">
+            </div>
+        </div>
+        <div class="navigation">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game of Thrones Ultimate Guide by Germán Valenzuela and Fátima Walls</p>    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

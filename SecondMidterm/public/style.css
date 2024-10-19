@@ -1,0 +1,79 @@
+body {
+    font-family: 'Press Start 2P', cursive; 
+    background-color: #1b1b2f; 
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0f3baa;
+    color: #e43f5a;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav input, nav button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f4068;
+    color: #e0e0e0;
+}
+
+main {
+    padding: 20px;
+}
+
+.character-card {
+    display: flex;
+    background-color: #398df4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.character-card img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    background-color: #1b1b2f;
+}
+
+.character-details {
+    padding: 20px;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation button {
+    background-color: #e43f5a;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error-message {
+    color: #e43f5a;
+    text-align: center;
+    display: block;
+}
+
+footer {
+    background-color: #162447;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 10px 0;
+}
